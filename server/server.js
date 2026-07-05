@@ -24,7 +24,10 @@ const app = express();
 // CORS (frontend connection)
 app.use(
   cors({
-    origin: "http://localhost:5173", // React Vite frontend
+    origin: [
+      "http://localhost:5173", // Local development
+      "https://car-rental-system-seven-rouge.vercel.app/",
+    ],
     credentials: true,
   })
 );
